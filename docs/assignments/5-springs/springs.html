@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Springs &mdash; The CSX Book  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Orbitals" href="../6-orbital/orbital.html" />
+    <link rel="prev" title="Matrix Assignment" href="../4-matrix/matrix.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> The CSX Book
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Assignments:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../1-getting-started/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2-riemann/riemann.html">Riemann Sums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3-projectile/projectile.html">Projectile Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4-matrix/matrix.html">Matrices</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Springs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bungee-cord">Bungee Cord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assignment">Assignment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#base">Base</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#part-1">Part 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#part-2">Part 2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../6-orbital/orbital.html">Orbitals</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">The CSX Book</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Springs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/assignments/5-springs/springs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="springs">
+<h1>Springs<a class="headerlink" href="#springs" title="Permalink to this headline">¶</a></h1>
+<p>You’ve learned about springs in your physics class, and now you can use that
+knowledge to make a model of a spring. While for your class you used ideal
+springs, you can actually give your springs mass in the model you build in
+this class.</p>
+<div class="section" id="bungee-cord">
+<h2>Bungee Cord<a class="headerlink" href="#bungee-cord" title="Permalink to this headline">¶</a></h2>
+<p>A bungee cord is elastic – if you stretch it, it snaps back to its original
+length. Therefore, one way to model a bungee cord is to represent it as a
+series of springs.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Bungee cords can be stretched, just like springs, but cannot be
+compressed. Therefore, make sure that your bungee cord doesn’t take
+compression into consideration, or you might encounter resonance and a
+bungee cord that behaves oddly.</p>
+</div>
+<div class="admonition-exercise admonition">
+<p class="first admonition-title">Exercise</p>
+<p class="last">What is the effective spring constant of a series of springs?</p>
+</div>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/springsPic.png"><img alt="../../_images/springsPic.png" src="../../_images/springsPic.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-text">A drawing of what your model would look like</span></p>
+</div>
+<p>The above drawing represents how you shoul construct your bungee cord. Think
+about the clases that you might need to write. What are the components of a
+bungee cord? What functions should you include in your classes?</p>
+<p>Instead of writing entirely new classes, you can reuse your old <code class="docutils literal"><span class="pre">Particle</span></code>
+class.</p>
+</div>
+<div class="section" id="assignment">
+<h2>Assignment<a class="headerlink" href="#assignment" title="Permalink to this headline">¶</a></h2>
+<p>Unlike your previous assignments, you will not do the base assignment at the
+same time as the extension. Instead, you will do the base, and return to the
+extension after the <strong>Orbital</strong> project. In order to prepare for this break,
+you should make sure to document your code clearly and thoroughly.</p>
+<div class="section" id="base">
+<h3>Base<a class="headerlink" href="#base" title="Permalink to this headline">¶</a></h3>
+<p>There are two components to the base assignment. Just as with the
+<strong>Projectile</strong> assignment, the base should not take nearly as long as your
+extension, and the first part of the base assignment should be far faster than
+the second.</p>
+<div class="section" id="part-1">
+<h4>Part 1<a class="headerlink" href="#part-1" title="Permalink to this headline">¶</a></h4>
+<p>Make a 1D spring. You should be able to input parameters like mass, number of
+springs/particles, and length. Use your spring to make a bungee cord, and then
+solve this problem:</p>
+<p>There is a bridge <strong>100 ft</strong> above a river. If a <strong>50 kg</strong> person wants to go
+bungee jumping off of the bridge, using a <strong>40 m</strong> long bungee cord with a
+mass of <strong>10 kg</strong>, what should the spring constant of the overall bungee cord
+be in order for the jumper to just barely graze the water?</p>
+<p>In addition to using your model to solve the question, you should try to
+answer the question yourself using what you know about springs already. Write
+up your theoretical answer, explaining how you got to your conclusion. In
+addition, explain any deviation between your theoretical answer and the answer
+you get from your model.</p>
+</div>
+<div class="section" id="part-2">
+<h4>Part 2<a class="headerlink" href="#part-2" title="Permalink to this headline">¶</a></h4>
+<p>Make a 2D spring, and then combine the springs end to end in order to make a
+string. Once you have your string, send a wave down the string in order to
+make a transverse wave. Your goal is to mimic the motion of a cello string
+once it is plucked.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Cello strings are not at their equilibrium length when they are on a
+cello. Instead, they are pulled taut. This means that when you “pluck”
+your string in your model, each of the springs should be stretched past
+its equilibrium length. This stretching should eliminate some of the
+horizontal motion that sometimes occurs between the point masses.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../6-orbital/orbital.html" class="btn btn-neutral float-right" title="Orbitals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../4-matrix/matrix.html" class="btn btn-neutral float-left" title="Matrix Assignment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Dalton School
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

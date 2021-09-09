@@ -1,0 +1,639 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Projectile Assignment &mdash; The CSX Book  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Matrix Assignment" href="../4-matrix/matrix.html" />
+    <link rel="prev" title="Riemann Sum Assignment" href="../2-riemann/riemann.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> The CSX Book
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Assignments:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../1-getting-started/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2-riemann/riemann.html">Riemann Sums</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Projectile Motion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-simulations">Introduction to Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-modeling">Introduction to Modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modeling-projectile-motion">Modeling Projectile Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#review-displaying-simulations-using-osp">Review: Displaying Simulations using OSP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-simulation-class">The Simulation Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dostep"><code class="docutils literal"><span class="pre">doStep()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reset"><code class="docutils literal"><span class="pre">reset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#initialize"><code class="docutils literal"><span class="pre">initialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#main"><code class="docutils literal"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#control-panel">Control Panel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#assignment">Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#base-assignment">Base Assignment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a-particle">1a. Particle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#b-particle-with-air-water-pressure">1b. Particle with air/water pressure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fallingballapp">2. FallingBallApp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#projectileapp-2d-movement">3. ProjectileApp (2D movement)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#baseballsimulationapp">4. BaseballSimulationApp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#extension">Extension</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../4-matrix/matrix.html">Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5-springs/springs.html">Springs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6-orbital/orbital.html">Orbitals</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">The CSX Book</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Projectile Assignment</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/assignments/3-projectile/projectile.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="projectile-assignment">
+<h1>Projectile Assignment<a class="headerlink" href="#projectile-assignment" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction-to-simulations">
+<h2>Introduction to Simulations<a class="headerlink" href="#introduction-to-simulations" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/test3.gif"><img alt="../../_images/test3.gif" src="../../_images/test3.gif" style="width: 100%;" /></a>
+</div>
+<p>This assignment will focus on projectile motion. You have already learned how
+to track the movement of a massless particle using kinematics equations.
+However, there are some limits to what you are able to calculate by hand.
+Therefore, it can be useful to instead use a computer model to simulate the
+movement of a particle.</p>
+<p>There are certain assumptions that are made in the kinematics equations you
+use in your physics classes. You treat the projectiles that you use in
+problems as massless points. These assumptions allow you to solve problems
+more easily and provide close approximations to the “correct” answer. You will
+also need to make some assumptions in the simulations you build.</p>
+<p>You should construct your simulation in layers of complexity, which means that
+the first draft of your simulation should be as simple as possible. Then, you
+can start to add on features and tweak your code to get closer and closer to a
+more accurate model. Alternatively, trying to make your simulation too
+complicated too quickly will likely give you issues when you try to debug.</p>
+</div>
+<div class="section" id="introduction-to-modeling">
+<h2>Introduction to Modeling<a class="headerlink" href="#introduction-to-modeling" title="Permalink to this headline">¶</a></h2>
+<p>Modeling is a concept that has broad definitions and meanings, even in
+science. We may never know the ‘true’ nature of the Universe and the laws
+governing its evolution – however, as scientists, we have made giant strides
+in discovering ever more precise approximations of its nature. These models
+enable us to understand how its different elements and systems interact. We
+can sometimes make predictions of future events or understand why that is
+impossible. Newton’s Laws of Motion, General Relativity, Quantum Mechanics,
+and String Theory are but a few of the fundamental models of different realms
+of the universe around us.</p>
+<p>Another way that science uses the idea of a model is when working within one
+of the models above. We simplify situations, hoping to include only the
+dominant physics that will model most of what we observe. For example, when
+understanding the orbit of the earth around the sun, we might start with these
+simplifications:</p>
+<ul class="simple">
+<li>The earth is the only planet</li>
+<li>The earth doesn’t have a moon</li>
+<li>The sun is fixed in space</li>
+</ul>
+<p>Using this model allows us to understand much, but not all, of the dynamics of
+a solar system.</p>
+<p>Since many models in Physics are described mathematically, the simplified
+models scientists work with involve solving mathematical systems of varying
+complexity. Sometimes these systems can be solved ‘by hand’ with the tools you
+are currently acquiring. More often the systems are too complex and their
+solutions must be found in another way. One way to do this is with a computer
+simulation – another tool you are learning to employ.</p>
+</div>
+<div class="section" id="modeling-projectile-motion">
+<h2>Modeling Projectile Motion<a class="headerlink" href="#modeling-projectile-motion" title="Permalink to this headline">¶</a></h2>
+<p>You are standing on the Brooklyn Bridge holding a rock. If you throw the rock
+and watch it fly through the air, what quantities can you determine?</p>
+<ul class="simple">
+<li>If you know the rock’s initial velocity, and can determine where it lands,
+what can you learn about the height of the bridge?</li>
+<li>If you already knew the height, could you predict where it would hit the
+water?</li>
+</ul>
+<p>You will begin to model the answers to these questions by creating a computer
+simulation of the rock’s motion.</p>
+<div class="admonition-pseudocode admonition">
+<p class="first admonition-title">Pseudocode</p>
+<p>When creating an algorithm, it can be helpful to start by writing
+<strong>pseudocode</strong>: text which describes a program without having to
+follow exact Java syntax. For example, the pseudocode for a program
+which finds the largest number in an array could be:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>set LARGEST to the first element in the array
+
+for each element in the array:
+  if CURRENT_ELEMENT is greater than LARGEST:
+    then set LARGEST to CURRENT_ELEMENT
+  otherwise do nothing
+
+output LARGEST
+</pre></div>
+</div>
+<p class="last">As you write pseudocode, imagine that a human will be reading and running
+your program, rather then the computer.</p>
+</div>
+</div>
+<div class="section" id="review-displaying-simulations-using-osp">
+<h2>Review: Displaying Simulations using OSP<a class="headerlink" href="#review-displaying-simulations-using-osp" title="Permalink to this headline">¶</a></h2>
+<p>You will use the <strong>Open Source Physics</strong> (OSP) library to display your physics
+simulations. You’ve already used OSP (specifically the <code class="docutils literal"><span class="pre">PlotFrame</span></code> class) to
+plot graphs and Riemann sums, and you used <code class="docutils literal"><span class="pre">AbstractSimulation</span></code> to make an animation n <code class="docutils literal"><span class="pre">Getting</span> <span class="pre">Started</span></code>. This section will review how to create OSP animated
+simulations.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It might be useful to look at the <a class="reference external" href="https://kjergens.github.io/osp-5.1.0/out/html/index.html?overview-summary.html">JavaDocs for OSP</a>
+in order to see for yourself what its methods look like. In the future, if
+you ever want to learn more aout a class, checking the documentation is a
+good place to start.</p>
+</div>
+<div class="section" id="the-simulation-class">
+<h3>The Simulation Class<a class="headerlink" href="#the-simulation-class" title="Permalink to this headline">¶</a></h3>
+<p>The first step when making an OSP simulation is to create a class which
+extends <code class="docutils literal"><span class="pre">AbstractSimulation</span></code> (<a class="reference external" href="https://kjergens.github.io/osp-5.1.0/out/html/org/opensourcephysics/controls/AbstractSimulation.html">doc</a>),
+the abstract class from which all simulations inherit:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">Projectile1DApp</span> <span class="n">extends</span> <span class="n">AbstractSimulation</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You’ll notice an error pop up; that’s because <code class="docutils literal"><span class="pre">AbstractSimulation</span></code> has an
+abstract method called <code class="docutils literal"><span class="pre">doStep()</span></code> which must be implemented inside of your
+simulation class (the <code class="docutils literal"><span class="pre">&#64;Override</span></code> annotation is a reminder that <code class="docutils literal"><span class="pre">doStep()</span></code>
+is implementing a method from its superclass).</p>
+</div>
+<div class="section" id="dostep">
+<h3><code class="docutils literal"><span class="pre">doStep()</span></code><a class="headerlink" href="#dostep" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">doStep()</span></code> is a function that is repeatedly called while the simulation is
+running. You can think of it as a looping <code class="docutils literal"><span class="pre">main()</span></code> function, or as a
+built-in while loop that always has a true condition. Since the code
+in <code class="docutils literal"><span class="pre">doStep()</span></code> will be repeated thousands of times throughout the course of
+the simulation, it is very important to think about how you will optimize your
+code so that it is as computationally efficient as possible.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@Override</span>
+<span class="n">protected</span> <span class="n">void</span> <span class="n">doStep</span><span class="p">()</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can make your simulation a little faster by avoiding updating your
+graphics every <code class="docutils literal"><span class="pre">doStep()</span></code>. Instead of just telling the simulation app to
+run the <code class="docutils literal"><span class="pre">doStep</span></code> less often, which will just slow the simulation down, or
+increasing your time interval, which will make your calculations less
+accurate, you can put a <code class="docutils literal"><span class="pre">for</span></code> loop inside of your <code class="docutils literal"><span class="pre">doStep()</span></code>. If you run
+calculations inside of the <code class="docutils literal"><span class="pre">for</span></code> loop and update your grpahics outside of
+the loop, you can determine for yourself how many times you want to allow
+the calculations to update before the graphics update.</p>
+</div>
+<p><code class="docutils literal"><span class="pre">doStep()</span></code> will be called repeatedly by OSP as your program runs; you will
+update the particle’s properties and display its new position inside of this
+method.</p>
+<p>Next, add the <code class="docutils literal"><span class="pre">reset()</span></code> and <code class="docutils literal"><span class="pre">initialize()</span></code> methods to <code class="docutils literal"><span class="pre">Projectile1DApp</span></code></p>
+</div>
+<div class="section" id="reset">
+<h3><code class="docutils literal"><span class="pre">reset()</span></code><a class="headerlink" href="#reset" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">reset()</span></code> runs at the start every time you run your simulation app. (It really should be called “setup” because it is run first, even before <code class="docutils literal"><span class="pre">initialize()</span></code>. This is a good place to add
+all of the information to the <strong>Control Panel</strong> that you want the user to be
+able to update with their own input. You can do this by writing
+<code class="docutils literal"><span class="pre">control.addValue(&quot;variableName&quot;,</span> <span class="pre">variableValue)</span></code>. Additionally, if you stop
+a simulation that is already initialized and running, you can press the
+<strong>Reset</strong> button to restart it and reinitialize it. In order to use this
+feature, during <code class="docutils literal"><span class="pre">reset()</span></code> it is best to clear off all of your graphics.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@Override</span>
+<span class="n">public</span> <span class="n">void</span> <span class="n">reset</span><span class="p">()</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="initialize">
+<h3><code class="docutils literal"><span class="pre">initialize()</span></code><a class="headerlink" href="#initialize" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">initialize()</span></code> runs directly after <code class="docutils literal"><span class="pre">reset()</span></code> and right before the first
+<code class="docutils literal"><span class="pre">doStep()</span></code>. As the name of the function suggests, it is a good time to get
+everything set up for your simulation. During this step, you should take all
+of the input from the <strong>Control Panel</strong> and store it in variables in your
+code. You can do this by running <code class="docutils literal"><span class="pre">control.getDouble()</span></code>,
+<code class="docutils literal"><span class="pre">control.getString()</span></code>, etc., using the appropriate function for your desired
+data type.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@Override</span>
+<span class="n">public</span> <span class="n">void</span> <span class="n">initialize</span><span class="p">()</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>As with <code class="docutils literal"><span class="pre">doStep()</span></code>, you will never call these methods yourself. Rather, they
+will be called by the superclass, <code class="docutils literal"><span class="pre">AbstractSimulation</span></code>. Just as <code class="docutils literal"><span class="pre">getSubintervalArea()</span></code>
+and <code class="docutils literal"><span class="pre">drawSlice()</span></code> had specific implementations for each Riemann sum rule,
+<code class="docutils literal"><span class="pre">doStep()</span></code>, <code class="docutils literal"><span class="pre">reset()</span></code>, and <code class="docutils literal"><span class="pre">initialize()</span></code> have specific implementations
+in your simulation. The <code class="docutils literal"><span class="pre">reset()</span></code> method will contain code which resets the
+simulation’s properties to their default values, while <code class="docutils literal"><span class="pre">initialize()</span></code> will
+contain code to set up the simulation before it runs.</p>
+</div>
+<div class="section" id="main">
+<h3><code class="docutils literal"><span class="pre">main()</span></code><a class="headerlink" href="#main" title="Permalink to this headline">¶</a></h3>
+<p>The last method you should add is a main method—the simulation class will
+be the main class for your program. This method will tell OSP to set up
+the simulation when the program starts:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">SimulationControl</span><span class="o">.</span><span class="n">createApp</span><span class="p">(</span><span class="n">new</span> <span class="n">FreeFallApp</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="control-panel">
+<h3>Control Panel<a class="headerlink" href="#control-panel" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/control-panel.svg"><img alt="../../_images/control-panel.svg" src="../../_images/control-panel.svg" width="50%" /></a>
+</div>
+<p>Your simulation app will automatically generate a pop-up window called a
+<strong>Control Panel</strong>. The <strong>Control Panel</strong> makes incorporating a lot of user
+input easy. Notice that there are three buttons on the <strong>Control Panel</strong>.
+<strong>Initialize</strong> and <strong>Reset</strong> each correlate to the <code class="docutils literal"><span class="pre">initialize()</span></code> and
+<code class="docutils literal"><span class="pre">reset()</span></code> functions, respsectively. So, pressing the <strong>Initialize</strong> button
+on the <strong>Control Panel</strong> will run <code class="docutils literal"><span class="pre">initialize()</span></code>. The <strong>Step</strong> button will
+run the code in your <code class="docutils literal"><span class="pre">doStep()</span></code> exactly once.</p>
+<div class="admonition-optional-exercise admonition">
+<p class="first admonition-title">Optional Exercise</p>
+<p><strong>Summary</strong>: Create an <code class="docutils literal"><span class="pre">AbstractSimulaton</span></code> class.</p>
+<ol class="arabic simple">
+<li>Open the window to create a new class in your package. Name the class […]App. This is the naming convention for your simulation classes.</li>
+<li>Before you click <strong>Finish</strong>, click the <strong>Browse</strong> button next to the <strong>Superclass</strong> text box. Choose <code class="docutils literal"><span class="pre">AbstractSimulation</span></code> and click <strong>OK</strong>.</li>
+<li>Under the “method stubs” section, choose to click the box next to <code class="docutils literal"><span class="pre">public</span>
+<span class="pre">static</span> <span class="pre">void</span> <span class="pre">main(String[]</span> <span class="pre">args)</span></code>.</li>
+<li>In <code class="docutils literal"><span class="pre">main()</span></code>, add this line: <code class="docutils literal"><span class="pre">SimulationControl.createApp(new</span> <span class="pre">&lt;NAME</span> <span class="pre">OF</span> <span class="pre">CLASS&gt;());</span></code></li>
+<li>Declare the following functions:</li>
+</ol>
+<blockquote class="last">
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">public</span> <span class="pre">void</span> <span class="pre">initialize()</span></code></li>
+<li><code class="docutils literal"><span class="pre">public</span> <span class="pre">void</span> <span class="pre">reset()</span></code></li>
+<li><code class="docutils literal"><span class="pre">public</span> <span class="pre">void</span> <span class="pre">doStep()</span></code></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+<div class="section" id="assignment">
+<h2>Assignment<a class="headerlink" href="#assignment" title="Permalink to this headline">¶</a></h2>
+<p>You will have to use the AbstractSimulation class for this project. Your
+simulation class should <strong>extend</strong> AbstractSimulation. You will also need to
+construct a <strong>Particle</strong> class. Try to be as thorough and thoughtful as
+possible when you make this class, because you will likely use it in the rest
+of your physics assignments.</p>
+<p>When you make the <strong>Particle</strong> class, consider what variables might affect how
+a projectile moves in air. These variables should be the <strong>fields</strong> in the
+class.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">While it can be tempting to code everything at once and then test it all at
+the end, the graphics are actually often helpful in order to give you a
+sense of what’s working and what’s not.</p>
+</div>
+</div>
+<div class="section" id="base-assignment">
+<h2>Base Assignment<a class="headerlink" href="#base-assignment" title="Permalink to this headline">¶</a></h2>
+<p>There are two parts of the base assignment. Part 4 will take much longer than
+Parts 1 - 3; it is essentially a mini-extension. While everyone in the class will do the same base
+assignments, you will not necessarily all get exactly the same values. This
+will depend on how you choose to calculate your position variables, your
+timestep, and, for Green Monster (Part 4), the way that you run your
+different iterations.</p>
+<p>Since there is no “right” answer, it can be difficult to tell if you are on
+the right path. You can try to compare answers with your fellow students to
+see if your approximations are at least close to each other. You can also try
+to calculate some of these scenarios by hand in order to see whether you get
+an answer that’s close. However, in the end, the goal is not really to get a
+certain “right” answer (since everything we do is an approximation), but
+rather to get an understanding of the physics concepts and their
+implementation.</p>
+<p>Before you start your base assignments, consider:</p>
+<ul class="simple">
+<li>What variables might affect the flight of your particle? These variables
+should be your attributes.</li>
+<li>What variables should the user be able to input?</li>
+<li>How will you represent your particle on the screen?</li>
+</ul>
+<div class="section" id="a-particle">
+<h3>1a. Particle<a class="headerlink" href="#a-particle" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-exercise admonition">
+<p class="first admonition-title">Exercise</p>
+<p><strong>Summary:</strong> Design and implement a Particle object.</p>
+<ol class="last arabic simple">
+<li>In src folder, create a new package namespace called <code class="docutils literal"><span class="pre">com.[yourname].projectile</span></code>.</li>
+<li>In <code class="docutils literal"><span class="pre">projectile</span></code> create a new Java class called <code class="docutils literal"><span class="pre">Particle</span></code>.</li>
+<li>Design the <code class="docutils literal"><span class="pre">Particle</span></code> class to model the motion of a particle - for example, a rock - in one dimension. Just like the real rock, you want your simulated rock to have certain properties at a given time. These properties correspond to the <strong>fields</strong> (attributes, aka, member variables) of the <code class="docutils literal"><span class="pre">Particle</span></code> object. What properties does a real particle have? What fields should an object of this type have?</li>
+<li>HINT: OSP already comes with a Circle object that keeps track of its x and y and also can be added to a PlotFrame as a Drawable. Can you extend Circle to be a Particle?</li>
+<li>Add a constructor to <code class="docutils literal"><span class="pre">Particle</span></code> which takes initial values for these properties and initializes the particle accordingly.</li>
+<li>Write a method <code class="docutils literal"><span class="pre">step()</span></code> which handles its motion after one segment of time. While in real life particles move continuously, you will model them as moving in discrete time steps. In each step, a certain amount of time <span class="math">\(\Delta t\)</span> should pass and the particle’s attributes should be updated. The method should take at least one  parameter, <span class="math">\(\Delta t\)</span> deltaTime. Use motion equations you have learned in physics class to update the relevant properties of the particle after each time segment elapses. The question you should be asking yourself is <strong>“if</strong> <span class="math">\(\Delta t\)</span> <strong>seconds pass, what are the new properties of the particle?”</strong></li>
+</ol>
+</div>
+</div>
+<div class="section" id="b-particle-with-air-water-pressure">
+<h3>1b. Particle with air/water pressure<a class="headerlink" href="#b-particle-with-air-water-pressure" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>Useful formulas:</strong></p>
+<ul class="simple">
+<li>weight = mass x gravity</li>
+<li>drag = air pressure x drag constant x cross sectional area x velocity <span class="math">\(^2\)</span> / mass x 2</li>
+<li>total net force = weight + drag</li>
+<li>acceleration = total net force  /  mass</li>
+</ul>
+<p><strong>Useful values:</strong></p>
+<ul class="last simple">
+<li>drag constant: <span class="math">\(0.02\)</span></li>
+<li>air pressure at sea level and 15 degrees C: 1.225 <span class="math">\(kg/m^3\)</span></li>
+<li>cross sectional area of a sphere: the area at the largest diameter (diameter at the center)</li>
+</ul>
+</div>
+<div class="admonition-exercise admonition">
+<p class="first admonition-title">Exercise</p>
+<p><strong>Summary:</strong> Enhance your Particle object to consider air/water pressure.</p>
+<ol class="last arabic simple">
+<li>In your existing <code class="docutils literal"><span class="pre">Particle</span></code> object add attributes for <code class="docutils literal"><span class="pre">mass</span></code> and <code class="docutils literal"><span class="pre">radius</span></code>. Update the constructor accordingly.</li>
+<li>Write a second <code class="docutils literal"><span class="pre">step()</span></code> method.</li>
+<li>The second step method should also take <span class="math">\(\Delta t\)</span> deltaTime as a parameter but also take <code class="docutils literal"><span class="pre">pressure</span></code>. Pressure is the air or water pressure the particle is travelling through. This is a constant that can be looked up.</li>
+<li>As a first step to finding the effects of pressure, compute the <code class="docutils literal"><span class="pre">weight</span></code> of the particle, using its <code class="docutils literal"><span class="pre">mass</span></code> and the force of gravity.</li>
+<li>Compute the <code class="docutils literal"><span class="pre">drag</span></code>. Drag is the force that is opposite the direction of travel and works against its weight. It is computed with a combination of <code class="docutils literal"><span class="pre">pressure</span></code>, <code class="docutils literal"><span class="pre">mass</span></code>, the cross-sectional surface area and a <code class="docutils literal"><span class="pre">drag</span> <span class="pre">constant</span></code>. See complete formula above.</li>
+<li>Once you know the force of <code class="docutils literal"><span class="pre">drag</span></code>, add it to the <code class="docutils literal"><span class="pre">weight</span></code> to get the <code class="docutils literal"><span class="pre">total</span> <span class="pre">net</span> <span class="pre">force</span></code>.</li>
+<li>Set the acceleration of the particle to the <code class="docutils literal"><span class="pre">total</span> <span class="pre">net</span> <span class="pre">force</span></code> divided by the <code class="docutils literal"><span class="pre">mass</span></code>.</li>
+<li>Set the other attributes of the particle like you did in the first <code class="docutils literal"><span class="pre">step()</span></code> method.</li>
+<li>Once the particle has reached <strong>terminal velocity</strong>, its acceleration should not change. (In other words, drag should never make the particle float upwards.) It is for you to figure out the <strong>terminal velocity</strong>.</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Make sure that your air resistance is affecting the particle in the right
+way (i.e., check the direction of the air resistance as the particle moves.
+Which way should the air resistance vector be pointing in relation to the
+particle’s velocity?)</p>
+</div>
+</div>
+<div class="section" id="fallingballapp">
+<h3>2. FallingBallApp<a class="headerlink" href="#fallingballapp" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-exercise admonition">
+<p class="first admonition-title">Exercise</p>
+<p><strong>Summary:</strong> Simulate a particle moving in one dimension.</p>
+<ol class="arabic simple">
+<li>In <code class="docutils literal"><span class="pre">projectile</span></code> create a new Java class called <code class="docutils literal"><span class="pre">FallingBallApp</span></code> that extends from <code class="docutils literal"><span class="pre">AbstractSimulation</span></code>. Add all the necessary methods.</li>
+<li>Create a <code class="docutils literal"><span class="pre">PlotFrame</span></code> to hold the simulation.</li>
+<li>Add two <code class="docutils literal"><span class="pre">Particle</span></code> objects to the PlotFrame. Each <code class="docutils literal"><span class="pre">Particle</span></code>. One <code class="docutils literal"><span class="pre">Particle</span></code> will move without air pressure, and the other will move with air pressure.</li>
+<li>Create three more <code class="docutils literal"><span class="pre">PlotFrame</span></code> s and plot each of these data per <code class="docutils literal"><span class="pre">Particle</span></code> object:</li>
+</ol>
+<ul class="simple">
+<li>Position over Time</li>
+<li>Velocity over Time</li>
+<li>Acceleration over Time</li>
+</ul>
+<p>When you have these four plots you are done with this exercise.</p>
+<blockquote class="last">
+<div><div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/falling_ball.gif"><img alt="../../_images/falling_ball.gif" src="../../_images/falling_ball.gif" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-text">The red particle has no air pressure and the green one has air pressure. Results will depend on the air/water pressure you chose and the mass and radius of the particles.</span></p>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="projectileapp-2d-movement">
+<h3>3. ProjectileApp (2D movement)<a class="headerlink" href="#projectileapp-2d-movement" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-exercise admonition">
+<p class="first admonition-title">Exercise</p>
+<p><strong>Summary:</strong> Simulate a projectile.</p>
+<ol class="arabic simple">
+<li>In <code class="docutils literal"><span class="pre">projectile</span></code> create a new Java class called <code class="docutils literal"><span class="pre">ProjectileApp</span></code> that extends <code class="docutils literal"><span class="pre">AbstractSimulation</span></code>.</li>
+<li>Edit your <code class="docutils literal"><span class="pre">Particle</span></code> object so it moves in two dimensions.</li>
+<li>In <code class="docutils literal"><span class="pre">ProjectileApp</span></code>, create a <code class="docutils literal"><span class="pre">PlotFrame</span></code> and plot two <code class="docutils literal"><span class="pre">Particles</span></code> , both moving in two dimensions, one without air resistance and one with. Look up the golden rule in order to add this second dimension.</li>
+</ol>
+<p>When you have something that works like the following you are done with this exercise:</p>
+<div class="last figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/projectile2D.gif"><img alt="../../_images/projectile2D.gif" src="../../_images/projectile2D.gif" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">The red particle has no air resistance and the green ball has air resistance. Results will vary depending on the air pressure and size of your particles.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="baseballsimulationapp">
+<h3>4. BaseballSimulationApp<a class="headerlink" href="#baseballsimulationapp" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-exercise admonition">
+<p class="first admonition-title">Exercise</p>
+<p><strong>Summary:</strong> Apply what you’ve learned to a real example.</p>
+<p>The Green Monster is a wall in Fenway park. It is 10 meters tall and 100 meters away from home plate. Your assignment is to create an animation that simulates hitting a particle the size of a baseball from 1 meter off of the ground to show at what velocities it will or will not go over over the wall.</p>
+<ol class="arabic simple">
+<li>Create a new Java class in <code class="docutils literal"><span class="pre">projectile</span></code> called <code class="docutils literal"><span class="pre">BaseballSimulationApp</span></code> that extends <code class="docutils literal"><span class="pre">AbstractSimuation</span></code>.</li>
+<li>Create a <code class="docutils literal"><span class="pre">PlotFrame</span></code> that will hold the animation.</li>
+<li>On the <code class="docutils literal"><span class="pre">PlotFrame</span></code>, draw a rectangle or line to represent the Green Monster.</li>
+<li>Also on the <code class="docutils literal"><span class="pre">PlotFrame</span></code>, show a <code class="docutils literal"><span class="pre">Particle</span></code> moving in both x and y directions, 1 meter off the ground, moving toward the wall.</li>
+<li>Use the Control Panel to change the velocity and discover the angle at the minimum velocity to clear the wall.</li>
+</ol>
+<div class="last figure align-center">
+<a class="reference internal image-reference" href="../../_images/greenmonster.jpg"><img alt="../../_images/greenmonster.jpg" src="../../_images/greenmonster.jpg" style="width: 100%;" /></a>
+</div>
+</div>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/baseball.gif"><img alt="../../_images/baseball.gif" src="../../_images/baseball.gif" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">Example of a failed attempt to hit a home run.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="extension">
+<h2>Extension<a class="headerlink" href="#extension" title="Permalink to this headline">¶</a></h2>
+<p>When you are done with the base assignment, extend it to model another real-world object.</p>
+<div class="admonition-exercise admonition">
+<p class="first admonition-title">Exercise</p>
+<p><strong>Summary:</strong> Model a real-world object of your choosing that moves in two dimensions.</p>
+<p>Physics extensions are very open ended, and the above prompt is not very exact. You should work through your idea for your extension with a physics teacher in order to determine together what might be a realistic goal based on your initial idea. While you work on the base assignment, you should think about what you might be interested in modeling.</p>
+<p>The most important component of this extension is your understanding of the
+underlying physics concepts. While looking up equations online might give you a realistic simulation, you will not learn anything if you don’t understanding why the formulas that you use will give you good approximations.</p>
+<p class="last">Once you know what you want your extension to be, just as you did in <code class="docutils literal"><span class="pre">Riemann</span></code>, you will build off of the code you already wrote for your base assignment. You will present the extension to the class and the teachers, so be ready to talk about what you learned and to answer some questions.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../4-matrix/matrix.html" class="btn btn-neutral float-right" title="Matrix Assignment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../2-riemann/riemann.html" class="btn btn-neutral float-left" title="Riemann Sum Assignment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Dalton School
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

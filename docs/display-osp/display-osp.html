@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Displaying Simulations using OSP &mdash; The CSX Book  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> The CSX Book
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Assignments:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/1-getting-started/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/2-riemann/riemann.html">Riemann Sums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/3-projectile/projectile.html">Projectile Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/4-matrix/matrix.html">Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/5-springs/springs.html">Springs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/6-orbital/orbital.html">Orbitals</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">The CSX Book</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Displaying Simulations using OSP</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/display-osp/display-osp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="displaying-simulations-using-osp">
+<h1>Displaying Simulations using OSP<a class="headerlink" href="#displaying-simulations-using-osp" title="Permalink to this headline">¶</a></h1>
+<p>You will use the <strong>Open Source Physics</strong> (OSP) library to display your physics
+simulations. You’ve already used OSP (specifically the <code class="docutils literal"><span class="pre">PlotFrame</span></code> class) to
+plot graphs and Riemann sums. This page will cover how to use OSP for animated
+simulations.</p>
+<p><a class="reference external" href="https://kjergens.github.io/osp-5.1.0/out/html/index.html?overview-summary.html">JavaDocs for OSP</a></p>
+<div class="section" id="the-simulation-class">
+<h2>The Simulation Class<a class="headerlink" href="#the-simulation-class" title="Permalink to this headline">¶</a></h2>
+<p>The first step when making an OSP simulation is to create a class which
+extends <code class="docutils literal"><span class="pre">AbstractSimulation</span></code> (<a class="reference external" href="https://kjergens.github.io/osp-5.1.0/out/html/org/opensourcephysics/controls/AbstractSimulation.html">doc</a>),
+the abstract class from which all simulations inherit:</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Projectile1DApp</span> <span class="kd">extends</span> <span class="n">AbstractSimulation</span> <span class="o">{</span>
+    <span class="c1">// ...</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>You’ll notice an error pop up; that’s because <code class="docutils literal"><span class="pre">AbstractSimulation</span></code> has an
+abstract method called <code class="docutils literal"><span class="pre">doStep()</span></code> which must be implemented inside of your
+simulation class (the <code class="docutils literal"><span class="pre">&#64;Override</span></code> annotation is a reminder that <code class="docutils literal"><span class="pre">doStep()</span></code>
+is implementing a method from its superclass):</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doStep</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// ...</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">doStep()</span></code> will be called repeatedly by OSP as your program runs; you will
+update the particle’s properties and display its new position inside of this
+method.</p>
+<p>Next, add the <code class="docutils literal"><span class="pre">reset()</span></code> and <code class="docutils literal"><span class="pre">initialize()</span></code> methods to <code class="docutils literal"><span class="pre">Projectile1DApp</span></code>:</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">reset</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// ...</span>
+<span class="o">}</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">initialize</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// ...</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>As with <code class="docutils literal"><span class="pre">doStep()</span></code>, you will never call these methods yourself. Rather, they
+will be called by the superclass, <code class="docutils literal"><span class="pre">AbstractSimulation</span></code>. Just as <code class="docutils literal"><span class="pre">slice()</span></code>
+and <code class="docutils literal"><span class="pre">slicePlot()</span></code> had specific implementations for each Riemann sum rule,
+<code class="docutils literal"><span class="pre">doStep()</span></code>, <code class="docutils literal"><span class="pre">reset()</span></code>, and <code class="docutils literal"><span class="pre">initialize()</span></code> have specific implementations
+in your simulation. The <code class="docutils literal"><span class="pre">reset()</span></code> method will contain code which resets the
+simulation’s properties to their default values, while <code class="docutils literal"><span class="pre">initialize()</span></code> will
+contain code to set up the simulation before it runs.</p>
+<p>The last method you should add is a main method—the simulation class will
+be the main class for your program. This method will tell OSP to set up
+the simulation when the program starts:</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">SimulationControl</span><span class="o">.</span><span class="na">createApp</span><span class="o">(</span><span class="k">new</span> <span class="n">FreeFallApp</span><span class="o">());</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Dalton School
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

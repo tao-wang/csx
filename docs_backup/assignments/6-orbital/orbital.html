@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Orbitals &mdash; The CSX Book  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Springs" href="../5-springs/springs.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> The CSX Book
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Assignments:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../1-getting-started/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2-riemann/riemann.html">Riemann Sums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3-projectile/projectile.html">Projectile Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4-matrix/matrix.html">Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5-springs/springs.html">Springs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Orbitals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#assignment-overview">Assignment Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-the-kepler-project">Introduction to the Kepler Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#part-1-the-model">Part 1: The Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#part-2-does-the-orbit-conform-to-keplers-laws">Part 2: Does the orbit conform to Keplers Laws?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#part-3-are-keplers-laws-a-consequence-of-the-mathematical-model-of-an-orbiting-planet">Part 3: Are Kepler’s Laws a consequence of the mathematical model of an orbiting planet?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#part-4-solar-systems-binary-stars-and-other-cosmic-structures">Part 4: Solar systems, binary stars, and other cosmic structures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#putting-it-all-together">Putting it All Together</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">The CSX Book</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Orbitals</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/assignments/6-orbital/orbital.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="orbitals">
+<h1>Orbitals<a class="headerlink" href="#orbitals" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="assignment-overview">
+<h2>Assignment Overview<a class="headerlink" href="#assignment-overview" title="Permalink to this headline">¶</a></h2>
+<p>One of Newton’s great triumphs was his development of the Law of Gravity. “…Feigning no hypothesis” of how masses attract one another, he determined a mathematical model for the attraction that predicted the interactions between masses. Not only was the law applicable to interactions between masses and the earth, but it also applied to the cosmos as well. It is fun to imagine how he must of felt when he showed that his model was consistent with Kepler’s Laws of Planetary Motion.</p>
+<p>In this assignment you will construct a simulation that uses Newton’s law of universal gravitation to model our solar system. A measure of how well your simulation works will be to compare the model with Kepler’s predictions for planetary motion.</p>
+<p>Is gravity really the only force holding the solar system and galaxy together?</p>
+</div>
+<div class="section" id="introduction-to-the-kepler-project">
+<h2>Introduction to the Kepler Project<a class="headerlink" href="#introduction-to-the-kepler-project" title="Permalink to this headline">¶</a></h2>
+<p>Kepler determined his <a class="reference external" href="https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion">laws</a> solely from observational data. However each of them can be stated in precise mathematical terms. Ellipses aren’t simply ‘ovals’, but well defined geometric shapes. The areal velocity is also well defined: the rate of change of area that a planet sweeps out with respect to time. (Neat, just like the rate of change of position with respect to time, only different.) You will need to construct a model of a planet orbiting the Sun, based on Newton’s Law of Gravity, to see if Kepler’s Laws are exact, or just close approximations for an orbiting planet.</p>
+<div class="section" id="part-1-the-model">
+<h3>Part 1: The Model<a class="headerlink" href="#part-1-the-model" title="Permalink to this headline">¶</a></h3>
+<p>Construct a model that has two masses. Properties of your two masses should be consistent with the attributes of a star and a planet. The only constraints on your model should be that the two masses interact solely by the Law of Gravity.</p>
+</div>
+<div class="section" id="part-2-does-the-orbit-conform-to-keplers-laws">
+<h3>Part 2: Does the orbit conform to Keplers Laws?<a class="headerlink" href="#part-2-does-the-orbit-conform-to-keplers-laws" title="Permalink to this headline">¶</a></h3>
+<p>Now that your simulation is up and running you have to use it to see if the planet’s orbit is consistent with Kepler’s Laws. How will you probe your model to answer this question?</p>
+<p>Kepler has 3 laws: Is the orbit an ellipse? Is the areal velocity constant? How is the period related to the major axis?</p>
+</div>
+<div class="section" id="part-3-are-keplers-laws-a-consequence-of-the-mathematical-model-of-an-orbiting-planet">
+<h3>Part 3: Are Kepler’s Laws a consequence of the mathematical model of an orbiting planet?<a class="headerlink" href="#part-3-are-keplers-laws-a-consequence-of-the-mathematical-model-of-an-orbiting-planet" title="Permalink to this headline">¶</a></h3>
+<p>This is challenging question. If you choose to work on it, you may want to consider the special case of a circular orbit first before moving on to the general case of an elliptical orbit.</p>
+</div>
+<div class="section" id="part-4-solar-systems-binary-stars-and-other-cosmic-structures">
+<h3>Part 4: Solar systems, binary stars, and other cosmic structures<a class="headerlink" href="#part-4-solar-systems-binary-stars-and-other-cosmic-structures" title="Permalink to this headline">¶</a></h3>
+<p>Having a simulation that models a system can be both fun to play with as well as a tool to learn, discover, and explore your own questions with. There are many questions you can explore by some simple modifications to your code. For Examples:</p>
+<p>Can you add another planet to your model and investigate how its orbit is different from the Earth’s?
+You might want to model a mass at one or more of the Lagrange points in the Earth-Sun system, are these orbits stabe?
+Or, can you simulate a binary star system (maybe even 3 stars!)?
+Extend your model to investigate one of these questions, or a question(s) of your own. Have you wondered whether an inverse cube law for gravity would hold a solar system together?</p>
+</div>
+</div>
+<div class="section" id="putting-it-all-together">
+<h2>Putting it All Together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h2>
+<p>It is easy to see how studying conic sections, polynomial relations, and rules about distances from foci and directrices could be a purely mathematical pursuit. It is amazing however to find these shapes embedded within the nature of the cosmos, and to learn still another set of constraints that defines their shapes. Our study of particular functions and relations will continue and you can anticipate still more connections between the math you are studying and its description of natural phenomena.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../5-springs/springs.html" class="btn btn-neutral float-left" title="Springs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Dalton School
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

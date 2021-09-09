@@ -1,0 +1,568 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started &mdash; The CSX Book  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Riemann Sum Assignment" href="../2-riemann/riemann.html" />
+    <link rel="prev" title="The CSX Book" href="../../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> The CSX Book
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Assignments:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#welcome-to-csx">Welcome to CSX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setup-your-environment">Setup your Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-junit">Introduction to JUnit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#problem-find-the-roots-of-a-quadratic">Problem: Find the roots of a Quadratic.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-create-a-test-class">Step 1: Create a Test Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-create-a-quadratic-object">Step 2: Create a Quadratic Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-add-methods-and-test-methods">Step 3: Add Methods and Test methods</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-polyfun">Introduction to Polyfun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getting-started-with-polynomials">Getting Started with Polynomials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#more-information">More Information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-open-source-physics-osp">Introduction to Open Source Physics (OSP)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-plotting-polynomials-static-graph">Step 1: Plotting Polynomials (Static Graph)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-introduction-to-animation">Step 2: Introduction to Animation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#background-information-abstract-classes">Background Information: Abstract Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-create-your-own-animation-random-walk">Step 3: Create Your Own Animation (Random Walk)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-advanced-spiral-trail-animation">Step 4: (Advanced) Spiral Trail Animation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">More Information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2-riemann/riemann.html">Riemann Sums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3-projectile/projectile.html">Projectile Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4-matrix/matrix.html">Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5-springs/springs.html">Springs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6-orbital/orbital.html">Orbitals</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">The CSX Book</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Getting Started</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/assignments/1-getting-started/getting-started.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="welcome-to-csx">
+<h2>Welcome to CSX<a class="headerlink" href="#welcome-to-csx" title="Permalink to this headline">¶</a></h2>
+<p>CSX, also know as Advanced Math and Physics Modeling, is three classes taught
+in a unified manner. The classes are Precalculus 2A, Physics A, and Computer
+Science X. In teaching Math and Physics in a unified way, we recognize the
+historical development of the two subjects. Math and Physics fit together like a hand in a glove. It’s most instructive, and most enjoyable, if the two
+subjects are presented in tandem. In teaching Math, Physics, and Computer
+Science in a unified way, we recognize the way in which contemporary
+scientists work. Whereas once all scientists were either experimentalists or
+theorists – and most were experimentalists – scientists are now increasingly
+engaged in the creation of computer models. This has become a third way in
+which to understand the physical world. Computer models are based upon an
+understanding of the relevant Math and Science. However, through the use of a
+computer, relatively simple Math and Science can be used to model extremely
+complicated situations. Consequently, computer models are ubiquitous in areas
+as disparate as Global Warming and the Human Genome.</p>
+<p>Almost all Computer Science projects will be based on Physics or Mathematics.
+Some programs will be computer models of physical situations. For example,
+you’ll model balls dropping, planets orbiting the Sun, and masses connected to a spring. Some programs will be realizations of mathematical algorithms. For instance, early on in the year you’ll write code to invert a matrix.</p>
+<p>When possible, the same topics will be covered at the same time in both Math
+and Physics. Many of the concepts covered in Precalculus and Physics were
+developed simultaneously. Math is necessary for a deep understanding of
+Physics, and Physics provides beautiful applications of what would otherwise
+be abstract Mathematics.</p>
+<p>We certainly hope you enjoy Math, Physics and Computer Science this year. In
+particular, we hope you find it helpful to approach the three subjects as, in
+some sense, one. Throughout the class, you should try to think about the ways
+in which Math is used in Physics, the ways in which Physics allows for a
+deeper understanding of Mathematics, and the ways in which computers could be
+used to gain a deeper understanding of either Math or Physics. In addition,
+bear in mind that Math and Physics provide a limitless source of programming
+challenges. Consequently, Math and Physics provide an excellent context in
+which to teach programming concepts.</p>
+<p><strong>Have a great year!</strong></p>
+</div>
+<div class="section" id="setup-your-environment">
+<h2>Setup your Environment<a class="headerlink" href="#setup-your-environment" title="Permalink to this headline">¶</a></h2>
+<p>Follow these images to set up your environment:</p>
+<div class="figure align-left" id="id2">
+<a class="reference internal image-reference" href="../../_images/setup00.png"><img alt="../../_images/setup00.png" src="../../_images/setup00.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text"><strong>Step 1.</strong> Open IntelliJ and select Get from VCS (top right button).</span></p>
+</div>
+<div class="figure align-left" id="id3">
+<a class="reference internal image-reference" href="../../_images/setup01.png"><img alt="../../_images/setup01.png" src="../../_images/setup01.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text"><strong>Step 2.</strong> In the URL box enter <a class="reference external" href="https://github.com/kjergens/XClassProjects.git">https://github.com/kjergens/XClassProjects.git</a> and select Clone.</span></p>
+</div>
+<div class="align-left figure" id="id4">
+<a class="reference internal image-reference" href="../../_images/setup02.png"><img alt="../../_images/setup02.png" src="../../_images/setup02.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text"><strong>Step 3.</strong> Expand the <strong>src</strong> and <strong>test</strong> folders. These folders have
+example classes and are where you will put all your code for this course.
+Your project should look like the above.</span></p>
+</div>
+</div>
+<div class="section" id="introduction-to-junit">
+<h2>Introduction to JUnit<a class="headerlink" href="#introduction-to-junit" title="Permalink to this headline">¶</a></h2>
+<p>For this section, you will review Quadratic equations, how to write objects
+and get introduced to writing test cases.</p>
+<div class="section" id="problem-find-the-roots-of-a-quadratic">
+<h3>Problem: Find the roots of a Quadratic.<a class="headerlink" href="#problem-find-the-roots-of-a-quadratic" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/rustremoval01.png"><img alt="../../_images/rustremoval01.png" src="../../_images/rustremoval01.png" style="width: 50%;" /></a>
+</div>
+<p>The <code class="docutils literal"><span class="pre">x</span></code> values that make this function equal to <code class="docutils literal"><span class="pre">0</span></code> are the <strong>roots</strong> or
+<strong>zeroes</strong> of the function and can be found by using the <strong>quadratic
+formula</strong>.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/rustremoval00.png"><img alt="../../_images/rustremoval00.png" src="../../_images/rustremoval00.png" style="width: 50%;" /></a>
+</div>
+<p>You are going to write a program that finds to roots (if they exist) for any
+quadratic equation.</p>
+</div>
+<div class="section" id="step-1-create-a-test-class">
+<h3>Step 1: Create a Test Class<a class="headerlink" href="#step-1-create-a-test-class" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-exercise admonition">
+<p class="first admonition-title">Exercise</p>
+<p>In the <strong>test</strong> folder of XClassProjects, create a new Java class called <code class="docutils literal"><span class="pre">QuadraticTest</span></code>. At the top of the class, import all the necessary JUnit libraries, like this:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="o">;</span>
+
+<span class="kn">import static</span> <span class="nn">org.hamcrest.core.Is.is</span><span class="o">;</span>
+<span class="kn">import static</span> <span class="nn">org.junit.Assert.*</span><span class="o">;</span>
+</pre></div>
+</td></tr></table></div>
+<p>In the body of the <code class="docutils literal"><span class="pre">QuadraticTest</span></code> class, create a test method called <code class="docutils literal"><span class="pre">getA</span></code>, like this:</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">getA</span><span class="o">()</span> <span class="o">{</span>
+   <span class="n">Quadratic</span> <span class="n">q</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Quadratic</span><span class="o">(</span><span class="mf">1.0</span><span class="o">,</span> <span class="mf">2.0</span><span class="o">,</span> <span class="mf">3.0</span><span class="o">);</span>
+
+   <span class="n">assertThat</span><span class="o">(</span><span class="n">q</span><span class="o">.</span><span class="na">getA</span><span class="o">(),</span> <span class="n">is</span><span class="o">(</span><span class="mf">1.0</span><span class="o">));</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>If you need help, look at the <code class="docutils literal"><span class="pre">GettingStartedTest</span></code> class, in the <strong>test</strong> folder as an example.</p>
+<p class="last">Run the QuadraticTest class. It will fail at first, which is expected.</p>
+</div>
+</div>
+<div class="section" id="step-2-create-a-quadratic-object">
+<h3>Step 2: Create a Quadratic Object<a class="headerlink" href="#step-2-create-a-quadratic-object" title="Permalink to this headline">¶</a></h3>
+<p>In order to get your test to pass, continue with the following exercise:</p>
+<div class="admonition-exercise admonition">
+<p class="first admonition-title">Exercise</p>
+<ol class="last arabic simple">
+<li>In the <strong>src</strong> folder, create a new Java class called <code class="docutils literal"><span class="pre">Quadratic</span></code>. This will be the object class that defines a quadratic function and methods that analyze its different characteristics.</li>
+<li>Create 3 private attributes <code class="docutils literal"><span class="pre">a</span></code>, <code class="docutils literal"><span class="pre">b</span></code> and <code class="docutils literal"><span class="pre">c</span></code>, all doubles.</li>
+<li>Write a constructor which takes <code class="docutils literal"><span class="pre">a</span></code>, <code class="docutils literal"><span class="pre">b</span></code> and <code class="docutils literal"><span class="pre">c</span></code> as params and uses them to set the <code class="docutils literal"><span class="pre">a</span></code>, <code class="docutils literal"><span class="pre">b</span></code> and <code class="docutils literal"><span class="pre">c</span></code> attributes.</li>
+<li>Write a public method called <code class="docutils literal"><span class="pre">getA</span></code> which returns the value of <code class="docutils literal"><span class="pre">a</span></code>.</li>
+<li>Run <code class="docutils literal"><span class="pre">QuadraticTest</span></code> again. It should pass this time.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="step-3-add-methods-and-test-methods">
+<h3>Step 3: Add Methods and Test methods<a class="headerlink" href="#step-3-add-methods-and-test-methods" title="Permalink to this headline">¶</a></h3>
+<p>Once your <code class="docutils literal"><span class="pre">QuadraticTest</span></code> passes, continue with the following exercise:</p>
+<div class="admonition-exercise admonition">
+<p class="first admonition-title">Exercise</p>
+<p><cite>Note: For this exercise, you will switch back and forth between the Quadratic and QuadraticTest classes.</cite></p>
+<p>Write the following methods in <code class="docutils literal"><span class="pre">Quadratic</span></code>. For each method, write at least one test method in <code class="docutils literal"><span class="pre">QuadraticTest</span></code>.</p>
+<ol class="arabic simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">public</span> <span class="pre">double</span> <span class="pre">getB()</span></code></dt>
+<dd>Return the value of b.
+In <code class="docutils literal"><span class="pre">QuadraticTest</span></code> and add test method for <code class="docutils literal"><span class="pre">getB</span></code>.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">public</span> <span class="pre">double</span> <span class="pre">getC()</span></code></dt>
+<dd>Return the value of c.
+In <code class="docutils literal"><span class="pre">QuadraticTest</span></code> and add test method for <code class="docutils literal"><span class="pre">getC</span></code>.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">public</span> <span class="pre">boolean</span> <span class="pre">hasRealRoots()</span></code></dt>
+<dd>See if the quadratic has real roots, return boolean true or false.
+Write a test method in <code class="docutils literal"><span class="pre">QuadraticTest</span></code> called <code class="docutils literal"><span class="pre">hasRealRoots</span></code> to test it .</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">public</span> <span class="pre">int</span> <span class="pre">numberOfRoots()</span></code></dt>
+<dd>Determine the number of real roots, return an int (0, 1, or 2).
+Write a test method in <code class="docutils literal"><span class="pre">QuadraticTest</span></code> called <code class="docutils literal"><span class="pre">numberOfRoots</span></code> to test it .</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">public</span> <span class="pre">double[]</span> <span class="pre">getRootArray()</span></code></dt>
+<dd>Find the roots, return 2 doubles (put them in an array).
+Write a test method in <code class="docutils literal"><span class="pre">QuadraticTest</span></code> called <code class="docutils literal"><span class="pre">getRootArray</span></code> to test it .</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">public</span> <span class="pre">double</span> <span class="pre">getAxisOfSymmetry()</span></code></dt>
+<dd>Find the axis of symmetry. Return that value.
+Write a test method in <code class="docutils literal"><span class="pre">QuadraticTest</span></code> called <code class="docutils literal"><span class="pre">getAxisOfSymmetry</span></code> to test it .</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">public</span> <span class="pre">double</span> <span class="pre">getExtremeValue()</span></code></dt>
+<dd>Find the extreme value, the maximum or minimum function value corresponding to the y coordinate of the vertex of the parabola. Return that value.
+Write a test method in <code class="docutils literal"><span class="pre">QuadraticTest</span></code> called <code class="docutils literal"><span class="pre">getExtremeValue</span></code> to test it .</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">public</span> <span class="pre">boolean</span> <span class="pre">isMax()</span></code></dt>
+<dd>Is the extreme value a Max or a Min? Does the parabola open up or down? Return true for Max and false for Min.
+Write a test method in <code class="docutils literal"><span class="pre">QuadraticTest</span></code> called <code class="docutils literal"><span class="pre">isMax</span></code> to test it .</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">public</span> <span class="pre">double</span> <span class="pre">evaluateWith(double</span> <span class="pre">x)</span></code></dt>
+<dd>Evaluate the quadratic function at an x value, return f(that x value).
+Write a test method in <code class="docutils literal"><span class="pre">QuadraticTest</span></code> called <code class="docutils literal"><span class="pre">evaluateWith</span></code> to test it .</dd>
+</dl>
+</li>
+</ol>
+<p class="last">When all the tests in <code class="docutils literal"><span class="pre">QuadraticTest</span></code> pass, you are finished with this exercise.</p>
+</div>
+</div>
+</div>
+<div class="section" id="introduction-to-polyfun">
+<h2>Introduction to Polyfun<a class="headerlink" href="#introduction-to-polyfun" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="getting-started-with-polynomials">
+<h3>Getting Started with Polynomials<a class="headerlink" href="#getting-started-with-polynomials" title="Permalink to this headline">¶</a></h3>
+<p>Open the <code class="docutils literal"><span class="pre">GettingStarted</span></code> class and look at the Polynomial examples. (Ignore the rest of the code in the <code class="docutils literal"><span class="pre">GettingStarted</span></code> class for now.) Run the code and look at the output in the console. (Again, ignore the pop-up that appears for now.)</p>
+<p>After looking over the code and the output, complete the following exercise.</p>
+<div class="admonition-exercise admonition">
+<p class="first admonition-title">Exercise</p>
+<p>Do the following in the <code class="docutils literal"><span class="pre">GettingStarted</span></code> class.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Create a Polynomial called <code class="docutils literal"><span class="pre">gx</span></code> and set it equal to <code class="docutils literal"><span class="pre">(4.0)X^4</span> <span class="pre">+</span> <span class="pre">5.0</span></code>. Print the Polynomial.</li>
+<li>Evaluate <code class="docutils literal"><span class="pre">vx</span></code> for when <code class="docutils literal"><span class="pre">x</span></code> is <code class="docutils literal"><span class="pre">2</span></code> and print the answer.</li>
+<li>Add <code class="docutils literal"><span class="pre">fx</span></code> and <code class="docutils literal"><span class="pre">vx</span></code> and print the answer.</li>
+<li>For <code class="docutils literal"><span class="pre">vx</span></code>, print the coefficient for the <code class="docutils literal"><span class="pre">X^1</span></code> term (also known as simply X).</li>
+<li>Use a <code class="docutils literal"><span class="pre">for</span></code>-loop or <code class="docutils literal"><span class="pre">for-each</span></code>-loop to print all the coefficients of <code class="docutils literal"><span class="pre">vx</span></code></li>
+</ol>
+</div></blockquote>
+<p>When you get the output below you are finished with this exercise:</p>
+<blockquote class="last">
+<div><div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/polyfunexercise.png"><img alt="../../_images/polyfunexercise.png" src="../../_images/polyfunexercise.png" style="width: 70%;" /></a>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="more-information">
+<h3>More Information<a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h3>
+<p>For more information, see the <a class="reference external" href="https://kjergens.github.io/polyfun-1.1.0/out/html/org/dalton/polyfun/Polynomial.html">Polynomial JavaDocs</a>.</p>
+</div>
+</div>
+<div class="section" id="introduction-to-open-source-physics-osp">
+<h2>Introduction to Open Source Physics (OSP)<a class="headerlink" href="#introduction-to-open-source-physics-osp" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="step-1-plotting-polynomials-static-graph">
+<h3>Step 1: Plotting Polynomials (Static Graph)<a class="headerlink" href="#step-1-plotting-polynomials-static-graph" title="Permalink to this headline">¶</a></h3>
+<p>Run the <code class="docutils literal"><span class="pre">GettingStarted</span></code> class again but this time look at the graph that appears. Hover over the graph for it to render. Look at the code under Open Source Physics (OSP) Example to see how this graph was made.</p>
+<p>When you think you understand, do the following exercise:</p>
+<div class="admonition-exercise admonition">
+<p class="first admonition-title">Exercise</p>
+<p>Do the following in the <code class="docutils literal"><span class="pre">GettingStarted</span></code> class.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Look at the code that makes the red line. Comment out the lines that append points to the red line. Then use a <code class="docutils literal"><span class="pre">for</span></code>-loop to make the red line a graph of <code class="docutils literal"><span class="pre">fx</span></code> for when x is values 0 - 10.</li>
+<li>Look at the code that makes the green line. Comment out the lines that append points to the green line. Then use a <code class="docutils literal"><span class="pre">for</span></code>-loop to make the green line a graph <code class="docutils literal"><span class="pre">vx</span></code> for when x is values 0 - 10.</li>
+<li>Look at the code that makes the orange trail. Notice how this is different from the previous lines. Comment out the code that adds points to the trail. Then use a <code class="docutils literal"><span class="pre">for</span></code>-loop to make the orange line a graph of <code class="docutils literal"><span class="pre">gx</span></code> (which you created in the Introduction to Polyfun exercise) for when x is values 0 - 10.</li>
+</ol>
+<p>When you get the output below you are finished with this exercise:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/plottingpoly.png"><img alt="../../_images/plottingpoly.png" src="../../_images/plottingpoly.png" style="width: 50%;" /></a>
+</div>
+</div></blockquote>
+<p class="last">Which do you prefer, appending x and y plot points, or creating a Trail?</p>
+</div>
+</div>
+<div class="section" id="step-2-introduction-to-animation">
+<h3>Step 2: Introduction to Animation<a class="headerlink" href="#step-2-introduction-to-animation" title="Permalink to this headline">¶</a></h3>
+<p>Open and run the <code class="docutils literal"><span class="pre">MovingBallApp</span></code>.</p>
+<p>This is an example of an animation. It is different from a static graph, which you did in Step 1, in that you have to write at least three methods (reset, intialize, and doStep) in order for it to work.</p>
+<div class="section" id="background-information-abstract-classes">
+<h4>Background Information: Abstract Classes<a class="headerlink" href="#background-information-abstract-classes" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal"><span class="pre">MovingBallApp</span></code> is an extension of <code class="docutils literal"><span class="pre">AbstractSimulation</span></code>, an <strong>abstract class</strong>.</p>
+<p>An <strong>abstract class</strong> is a class that is meant to be extended and one where the author left some methods empty, which are meant to be overridden. These empty methods are called <strong>abstract methods</strong>.</p>
+<p>In AbstractSimulation, these are the abstract methods that MovingBallApp needs to override:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">reset</span></code> - Adds options to the Control Panel and returns the simulation to its default state. All commands within the reset() method are executed the FIRST time the simulation is INITIALIZED, and every time the RESET button is clicked after that. Note that the RESET button appears when the app is first loaded, but does not appear again until the app has been STARTED and STOPPED, and NEW is clicked.</li>
+<li><code class="docutils literal"><span class="pre">initialize</span></code> - Sets the initial conditions of your simulation. It should read and store values from the control panel and add objects to the PlotFrame. The commands within this method are executed once, or every time the INITIALIZE button in clicked.</li>
+<li><code class="docutils literal"><span class="pre">doStep</span></code> - Invoked every 1/10 second, it defines the actions that do the animation. It is also invoked each time the Step button is pressed.</li>
+</ol>
+</div></blockquote>
+<p>You also need a <code class="docutils literal"><span class="pre">main</span></code> method to run the simulation.</p>
+<p>Examine the MovingBallApp code, then do the following exercise.</p>
+<div class="admonition-exercise admonition">
+<p class="first admonition-title">Exercise</p>
+<p>Do the following in the <code class="docutils literal"><span class="pre">MovingBallApp</span></code> class.</p>
+<blockquote class="last">
+<div><ol class="arabic simple">
+<li>Add code to let the user set the starting X position of the ball.</li>
+<li>Make the ball move diagonally across the graph, so as y decreases by 1, x simultaneously increases by 1.</li>
+</ol>
+<p>When you get the output below you are finished with this exercise:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/movingball.gif"><img alt="../../_images/movingball.gif" src="../../_images/movingball.gif" style="width: 50%;" /></a>
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>
+<div class="section" id="step-3-create-your-own-animation-random-walk">
+<h3>Step 3: Create Your Own Animation (Random Walk)<a class="headerlink" href="#step-3-create-your-own-animation-random-walk" title="Permalink to this headline">¶</a></h3>
+<p>Now you’ll create an animation from scratch.</p>
+<div class="admonition-exercise admonition">
+<p class="first admonition-title">Exercise</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>In the <strong>src</strong> folder, create a new Java class called <code class="docutils literal"><span class="pre">RandomWalkApp</span></code>.</li>
+<li>Copy and paste the <code class="docutils literal"><span class="pre">MovingBallApp</span></code> class as starter code. Change the <code class="docutils literal"><span class="pre">main</span></code> method to run <code class="docutils literal"><span class="pre">RandomWalkApp</span></code>.</li>
+<li>Change <code class="docutils literal"><span class="pre">doStep</span></code> so that <code class="docutils literal"><span class="pre">circle</span></code> randomly moves either 1 spot up, 1 spot down, or stays at the same y. It also randomly moves 1 spot left, 1 spot right or stays at the same x.</li>
+<li>Add 50 Circles that move in this way.</li>
+</ol>
+<p>When you get output similar to the graph below you are finished with this exercise:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/randomwalk.gif"><img alt="../../_images/randomwalk.gif" src="../../_images/randomwalk.gif" style="width: 50%;" /></a>
+</div>
+</div></blockquote>
+<p><strong>HINT</strong>: Change the global <code class="docutils literal"><span class="pre">circle</span></code> variable to an <code class="docutils literal"><span class="pre">ArrayList</span></code> of type <code class="docutils literal"><span class="pre">Circle</span></code> called <code class="docutils literal"><span class="pre">circles</span></code>.</p>
+<p class="last"><strong>HINT</strong>: You’ll need a <code class="docutils literal"><span class="pre">for</span></code>-loop in <code class="docutils literal"><span class="pre">initialize</span></code> to add 50 Circles to <code class="docutils literal"><span class="pre">circles</span></code>, a <code class="docutils literal"><span class="pre">for-each</span></code>-loop in <code class="docutils literal"><span class="pre">doStep</span></code> to move each Circle in <code class="docutils literal"><span class="pre">circles</span></code>, and, optionally, a <code class="docutils literal"><span class="pre">for-each</span></code>-loop in <code class="docutils literal"><span class="pre">stop</span></code> to print how far each Circle in <code class="docutils literal"><span class="pre">circles</span></code> moved.</p>
+</div>
+</div>
+<div class="section" id="step-4-advanced-spiral-trail-animation">
+<h3>Step 4: (Advanced) Spiral Trail Animation<a class="headerlink" href="#step-4-advanced-spiral-trail-animation" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-exercise admonition">
+<p class="first admonition-title">Exercise</p>
+<p>For this exercise, you have to determine on your own to which method - <code class="docutils literal"><span class="pre">reset</span></code>, <code class="docutils literal"><span class="pre">initialize</span></code>, or <code class="docutils literal"><span class="pre">doStep</span></code> - to edit for each step.</p>
+<blockquote>
+<div><cite>Note: If you like, you may first make this a static graph, and then change it to an animation.</cite></div></blockquote>
+<ol class="arabic simple">
+<li>In <strong>src</strong> folder, Create a new Java class called <code class="docutils literal"><span class="pre">SpiralTrailApp</span></code>. The class should extend <code class="docutils literal"><span class="pre">AbstractSimulation</span></code>.</li>
+<li>Set up empty methods for <code class="docutils literal"><span class="pre">reset</span></code>, <code class="docutils literal"><span class="pre">initialize</span></code>, and <code class="docutils literal"><span class="pre">doStep</span></code>.</li>
+<li>Add a <code class="docutils literal"><span class="pre">main</span></code> method to run the simulation.</li>
+<li>Create a rectangle using the <code class="docutils literal"><span class="pre">DrawableShape.createRectangle()</span></code> method like this:</li>
+</ol>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="c1">// The x and y parameters place the center of the rectangle.</span>
+<span class="n">DrawableShape</span> <span class="n">rect</span> <span class="o">=</span> <span class="n">DrawableShape</span><span class="o">.</span><span class="na">createRectangle</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">);</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li>Edit the rectangle to be a square with the lower left corner at (1,1) and upper right corner at (5,5). Note that the x and y represent the center of the rectangle, not the upper left corner.</li>
+<li>Create a PlotFrame and add the square.</li>
+<li>Set the PlotFrame’s preferred min and max x and y so that the square is in the middle of the plot frame.</li>
+<li>On the PlotFrame draw a circle centered at each of the lattice points contained in the square. (There should be a total of 25 circles.)</li>
+<li>Draw a Trail that starts at the origin, (3, 3), and “steps” outward in a spiral-like shape by first going to (2, 3), then (2, 2), (4, 2), etc. The path should consist of 2 segments of length 1, then 2 segments of length 2, then 2 segments of length 3, etc. and the path turns 90° counter clockwise at the end of each segment. End the Trail at (1, 5).</li>
+</ol>
+<p>When you get the output below you are finished with this exercise:</p>
+<div class="last figure align-center">
+<a class="reference internal image-reference" href="../../_images/spiral.gif"><img alt="../../_images/spiral.gif" src="../../_images/spiral.gif" style="width: 50%;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>More Information<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>For more information on Open Source Physics, read the <a class="reference external" href="https://kjergens.github.io/osp-5.1.0/out/html/index.html?overview-summary.html">Open Source Physics JavaDocs</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../2-riemann/riemann.html" class="btn btn-neutral float-right" title="Riemann Sum Assignment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../index.html" class="btn btn-neutral float-left" title="The CSX Book" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Dalton School
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
